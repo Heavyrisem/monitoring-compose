@@ -12,6 +12,8 @@ services:
       - /var/lib/docker/:/var/lib/docker:ro
     networks:
       - nginx
+    deploy:
+      mode: global
 networks:
   nginx:
     external: true
