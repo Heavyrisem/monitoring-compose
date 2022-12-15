@@ -12,3 +12,6 @@ services:
       - /var/lib/docker/:/var/lib/docker:ro
     networks:
       - nginx
+networks:
+  nginx:
+    external: true
