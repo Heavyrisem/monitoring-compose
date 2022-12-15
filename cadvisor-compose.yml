@@ -3,17 +3,16 @@ services:
   cadvisor:
     image: martadinata666/cadvisor:latest
     container_name: cadvisor
-    ports:
-      - 8080:8080
+    # ports:
+    #   - 8080:8080
     volumes:
       - /:/rootfs:ro
       - /var/run/docker.sock:/var/run/docker.sock:rw
       - /sys:/sys:ro
       - /var/lib/docker/:/var/lib/docker:ro
-    networks:
-      - nginx
-    deploy:
-      mode: global
-networks:
-  nginx:
-    external: true
+# You Should Connect Your network, or just expose 8080 port
+#     networks:
+#       - nginx
+# networks:
+#   nginx:
+#     external: true
